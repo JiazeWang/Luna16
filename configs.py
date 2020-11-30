@@ -1,5 +1,5 @@
 # some directory for output the results:
-OUTPUT_PATH = '/Users/mostafa/PycharmProjects/Luna/prepare/tmp'
+OUTPUT_PATH = '/data/ssd/public/jzwang/dlung/Luna16/output'
 
 # Resource path which contains: annotations.csv, candidates.csv,
 # and subdirectories containing .mhd files.
@@ -19,7 +19,7 @@ OUTPUT_PATH = '/Users/mostafa/PycharmProjects/Luna/prepare/tmp'
                         *.mhd
                         *.raw
 '''
-RESOURCES_PATH = '/Users/mostafa/Desktop/dsb_analyse/input'
+RESOURCES_PATH = '/data/ssd/public/jzwang/dlung/data'
 
 
 
