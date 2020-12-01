@@ -1,8 +1,8 @@
-from prepare._classes import CTScan
 import pandas as pd
 import numpy as np
 from glob import glob
 import os
+from prepare._classes import CTScan
 from configs import OUTPUT_PATH, RESOURCES_PATH
 
 annotations = pd.read_csv(RESOURCES_PATH + '/annotations.csv')
