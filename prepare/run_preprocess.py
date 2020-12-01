@@ -54,4 +54,6 @@ def save_preprocessed_data():
 
 
 if __name__ == '__main__':
+    import sys
+    sys.path.append(os.getcwd())
     save_preprocessed_data()
