@@ -78,7 +78,7 @@ regress loss {np.mean(metrics[:, 2])}, {np.mean(metrics[:, 3])},
 def validate(data_loader, net, loss):
     start_time = time.time()
 
-    net.eval()
+    net.train()
 
     metrics = []
     for i, (data, target, coord) in enumerate(data_loader):
