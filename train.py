@@ -140,8 +140,9 @@ with learning rate starting from: {get_lr(starting_epoch)}, and loss: {initial_l
     val_loader = DataLoader(lvd, batch_size=1, shuffle=False)
 
     for ep in range(starting_epoch, TOTAL_EPOCHS):
-        train(train_loader, neural_net, loss_fn, ep, optim, get_lr, save_dir=save_dir)
         validate(train_loader, neural_net, loss_fn)
+        train(train_loader, neural_net, loss_fn, ep, optim, get_lr, save_dir=save_dir)
+
 
 
 if __name__ == '__main__':
