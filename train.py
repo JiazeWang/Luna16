@@ -78,7 +78,7 @@ regress loss {np.mean(metrics[:, 2])}, {np.mean(metrics[:, 3])},
 def validate(data_loader, net, loss):
     start_time = time.time()
 
-    net.train()
+    net.eval()
 
     metrics = []
     for i, (data, target, coord) in enumerate(data_loader):
@@ -140,7 +140,7 @@ with learning rate starting from: {get_lr(starting_epoch)}, and loss: {initial_l
     val_loader = DataLoader(lvd, batch_size=1, shuffle=False)
 
     for ep in range(starting_epoch, TOTAL_EPOCHS):
-        validate(train_loader, neural_net, loss_fn)
+        validate(train_loaderf, neural_net, loss_fn)
         train(train_loader, neural_net, loss_fn, ep, optim, get_lr, save_dir=save_dir)
 
 
