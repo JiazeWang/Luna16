@@ -135,8 +135,8 @@ with learning rate starting from: {get_lr(starting_epoch)}, and loss: {initial_l
     val_indices = list(itertools.chain(*[list(i.values())[0] for i in list_of_groups[:val_split]]))
     train_indices = list(itertools.chain(*[list(i.values())[0] for i in list_of_groups[val_split:]]))
     ltd = LunaDataSet(train_indices, meta)
-    lvd = LunaDataSet(val_indices, meta)
-    print("lvd", lvd)
+    lvd = LunaDataSet(train_indices, meta)
+    #lvd = LunaDataSet(val_indices, meta)
     train_loader = DataLoader(ltd, batch_size=1, shuffle=False)
     val_loader = DataLoader(lvd, batch_size=1, shuffle=False)
 
