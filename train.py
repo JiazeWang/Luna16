@@ -95,6 +95,7 @@ def validate(data_loader, net, loss):
 
         loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)
+        break
     end_time = time.time()
 
     metrics = np.asarray(metrics, np.float32)
