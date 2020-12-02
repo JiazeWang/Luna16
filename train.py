@@ -26,6 +26,7 @@ def get_lr(epoch):
 
 
 def train(data_loader, net, loss, epoch, optimizer, get_lr, save_dir='./models/'):
+    print("****************training:*******************")
     start_time = time.time()
 
     net.train()
@@ -76,6 +77,7 @@ regress loss {np.mean(metrics[:, 2])}, {np.mean(metrics[:, 3])},
 
 
 def validate(data_loader, net, loss):
+    print("****************validation:*******************")
     start_time = time.time()
 
     net.eval()
